@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Votación</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="js.js"></script>
+</head>
+<body>
+    <h2>FORMULARIO DE VOTACIÓN:</h2>
+    <form id="votingForm" action="process.php" method="post">
+        <!-- Campos del formulario -->
+        <label for="nombreApellido">Nombre y Apellido:</label>
+        <input type="text" id="nombreApellido" name="nombreApellido" required>
+        <br>
+        <label for="alias">Alias:</label>
+        <input type="text" id="alias" name="alias" required pattern=".{6,}" title="Alias debe tener más de 5 caracteres y contener solo letras y números.">
+        <br>
+        <label for="rut">RUT:</label>
+        <input type="text" id="rut" name="rut" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="region">Región:</label>
+        <select id="region" name="region" required></select>
+        <br>
+        <label for="comuna">Comuna:</label>
+        <select id="comuna" name="comuna" required></select>
+        <br>
+        <label for="candidato">Candidato:</label>
+        <select id="candidato" name="candidato" required></select>
+        <br>
+        <label>Cómo se enteró de nosotros</label>
+        <input type="checkbox" id="web" name="comoSeEntero[]" value="Web"> Web
+        <input type="checkbox" id="tv" name="comoSeEntero[]" value="TV"> TV
+        <input type="checkbox" id="redesSociales" name="comoSeEntero[]" value="RedesSociales"> Redes Sociales
+        <input type="checkbox" id="amigo" name="comoSeEntero[]" value="Amigo"> Amigo
+        <!-- Botón de envío -->
+        <br>
+        <input type="submit" value="Votar">
+    </form>
+</body>
+</html>

@@ -1,0 +1,14 @@
+Aplicaciones usadas:
+XAMPP 8.2.4
+SqlYog Community 13.2.1
+
+Version de PHP 8.2.4
+Usar base de datos mySql
+
+datos de conexion:
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "votacion";
+
+El proyecto esta originalmente almacenado en un directorio llamado "votacion" y todos los archivos necesarios para su funcionamiento estan en la raiz.
