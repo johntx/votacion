@@ -96,6 +96,12 @@ $(document).ready(function() {
                 alert(response);
 
                 // Limpiar el formulario
+                $('#comuna')
+                .find('option')
+                .remove()
+                .end()
+                .append('<option selected disabled>Seleccione</option>')
+                ;
                 $('#votingForm')[0].reset();
             },
             error: function() {

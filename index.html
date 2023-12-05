@@ -10,35 +10,69 @@
     <h2>FORMULARIO DE VOTACIÓN:</h2>
     <form id="votingForm" action="process.php" method="post">
         <!-- Campos del formulario -->
-        <label for="nombreApellido">Nombre y Apellido:</label>
-        <input type="text" id="nombreApellido" name="nombreApellido" required>
+        <div class="form-content">
+            <label for="nombreApellido">Nombre y Apellido:</label>
+            <input type="text" id="nombreApellido" name="nombreApellido" required>
+        </div>
+        <div class="form-content">
+            <label for="alias">Alias:</label>
+            <input type="text" id="alias" name="alias" required pattern=".{6,}" title="Alias debe tener más de 5 caracteres y contener solo letras y números.">
+        </div>
+        <div class="form-content">
+            <label for="rut">RUT:</label>
+            <input type="text" id="rut" name="rut" required>
+        </div>
+        <div class="form-content">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-content">
+            <label for="region">Región:</label>
+            <select id="region" name="region" required></select>
+        </div>
+        <div class="form-content">
+            <label for="comuna">Comuna:</label>
+            <select id="comuna" name="comuna" required>
+                <option selected disabled>Seleccione</option>
+            </select>
+        </div>
+        <div class="form-content">
+            <label for="candidato">Candidato:</label>
+            <select id="candidato" name="candidato" required></select>
+        </div>
+        <div class="form-content">
+            <label>Cómo se enteró de nosotros</label>
+            <input type="checkbox" id="web" name="comoSeEntero[]" value="Web"><label for="web"> Web</label>
+            <input type="checkbox" id="tv" name="comoSeEntero[]" value="TV"><label for="tv"> TV</label>
+            <input type="checkbox" id="redesSociales" name="comoSeEntero[]" value="RedesSociales"><label for="redesSociales"> Redes Sociales</label>
+            <input type="checkbox" id="amigo" name="comoSeEntero[]" value="Amigo"><label for="amigo"> Amigo</label>
+        </div>
         <br>
-        <label for="alias">Alias:</label>
-        <input type="text" id="alias" name="alias" required pattern=".{6,}" title="Alias debe tener más de 5 caracteres y contener solo letras y números.">
-        <br>
-        <label for="rut">RUT:</label>
-        <input type="text" id="rut" name="rut" required>
-        <br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <br>
-        <label for="region">Región:</label>
-        <select id="region" name="region" required></select>
-        <br>
-        <label for="comuna">Comuna:</label>
-        <select id="comuna" name="comuna" required></select>
-        <br>
-        <label for="candidato">Candidato:</label>
-        <select id="candidato" name="candidato" required></select>
-        <br>
-        <label>Cómo se enteró de nosotros</label>
-        <input type="checkbox" id="web" name="comoSeEntero[]" value="Web"> Web
-        <input type="checkbox" id="tv" name="comoSeEntero[]" value="TV"> TV
-        <input type="checkbox" id="redesSociales" name="comoSeEntero[]" value="RedesSociales"> Redes Sociales
-        <input type="checkbox" id="amigo" name="comoSeEntero[]" value="Amigo"> Amigo
         <!-- Botón de envío -->
-        <br>
         <input type="submit" value="Votar">
     </form>
 </body>
+<style>
+    form {
+        display: block;
+    }
+    .form-content {
+        display: block;
+    }
+    label:first-child {
+        width: 180px;
+        display: inline-block;
+    }
+    input {
+        width: 180px;
+    }
+    select {
+        width: 188px !important;
+        padding: 1px 2px;
+    }
+    input[type="checkbox" i]{
+        width: auto;
+    }
+</style>
 </html>
+
